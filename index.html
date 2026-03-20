@@ -1,1 +1,286 @@
-<h1>나의 새로운 포트폴리오 페이지</h1>
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | 혁신을 만드는 개발자</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts (Noto Sans KR) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- AOS Library for Scroll Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f8fafc;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #6366f1;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-card py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold gradient-text tracking-tighter">DEV.PORTFOLIO</a>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#tech" class="nav-link">Tech Stack</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (Simple) -->
+            <div class="md:hidden">
+                <i data-lucide="menu" class="cursor-pointer"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
+            <span class="inline-block px-4 py-1 rounded-full bg-indigo-50 text-indigo-600 font-semibold text-sm mb-6 border border-indigo-100">Web Developer Portfolio</span>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                안녕하세요, <span class="gradient-text">최성광</span>입니다.<br>
+                견고한 코드로 가치를 만듭니다.
+            </h1>
+            <p class="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto mb-10 leading-relaxed">
+                3년 차 개발자로서 풀스택 실무 경험을 쌓아왔으며,<br class="hidden md:block">
+                현재 AI와 Cloud 기술을 결합하여 더 넓은 세상을 향해 나아가고 있습니다.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#projects" class="px-8 py-4 bg-indigo-600 text-white rounded-2xl font-bold hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-200">프로젝트 보기</a>
+                <a href="#contact" class="px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-2xl font-bold hover:bg-slate-50 transition-all">연락하기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-24 bg-white px-6">
+        <div class="container mx-auto max-w-5xl">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="relative inline-block">
+                        <div class="w-64 h-64 md:w-80 md:h-80 bg-indigo-100 rounded-[3rem] overflow-hidden rotate-3">
+                            <img src="https://choisungkwang.github.io/my-portfolio/%EC%A6%9D%EB%AA%85%EC%82%AC%EC%A7%84.jpg" alt="Profile" class="w-full h-full object-cover -rotate-3 hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-indigo-600 rounded-2xl flex items-center justify-center text-white shadow-xl rotate-12">
+                            <div class="text-center -rotate-12">
+                                <span class="block text-2xl font-bold">3+</span>
+                                <span class="text-xs">Years Exp.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-bold mb-6">About Me</h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        안녕하세요! 저는 문제를 해결하는 과정에서 즐거움을 느끼는 3년 차 웹 개발자입니다. 기업용 솔루션과 고가용성 시스템을 개발하며 백엔드 아키텍처에 대한 깊은 이해를 쌓았습니다.
+                    </p>
+                    <p class="text-slate-600 mb-8 leading-relaxed font-medium text-indigo-600">
+                        "현재 저는 기존의 안정적인 개발 역량에 AI 모델링과 Cloud 네이티브 기술을 더해 지능형 서비스를 구축하는 엔지니어로 확장하고 있습니다."
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-slate-50 rounded-2xl">
+                            <span class="block text-indigo-600 font-bold mb-1">Location</span>
+                            <span class="text-slate-700">Seoul, South Korea</span>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-2xl">
+                            <span class="block text-indigo-600 font-bold mb-1">Education</span>
+                            <span class="text-slate-700">Computer Science B.S.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech" class="py-24 px-6 bg-slate-50">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4">Tech Stack</h2>
+                <p class="text-slate-500">제가 능숙하게 사용하거나 현재 확장 중인 기술들입니다.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Skill Card 1 -->
+                <div class="p-6 bg-white rounded-[2rem] shadow-sm hover:shadow-md transition-shadow text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4 font-bold">C#</div>
+                    <h3 class="font-bold">ASP.NET & C#</h3>
+                    <p class="text-xs text-slate-400 mt-2">Core Framework</p>
+                </div>
+                <!-- Skill Card 2 -->
+                <div class="p-6 bg-white rounded-[2rem] shadow-sm hover:shadow-md transition-shadow text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center mx-auto mb-4 font-bold">SQL</div>
+                    <h3 class="font-bold">Oracle SQL</h3>
+                    <p class="text-xs text-slate-400 mt-2">Database Mgmt</p>
+                </div>
+                <!-- Skill Card 3 -->
+                <div class="p-6 bg-white rounded-[2rem] shadow-sm hover:shadow-md transition-shadow text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-4 font-bold">AZ</div>
+                    <h3 class="font-bold">Azure Cloud</h3>
+                    <p class="text-xs text-slate-400 mt-2">DevOps & Infra</p>
+                </div>
+                <!-- Skill Card 4 -->
+                <div class="p-6 bg-white rounded-[2rem] shadow-sm hover:shadow-md transition-shadow text-center" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="w-12 h-12 bg-yellow-50 text-yellow-600 rounded-xl flex items-center justify-center mx-auto mb-4 font-bold">PY</div>
+                    <h3 class="font-bold">Python & AI</h3>
+                    <p class="text-xs text-slate-400 mt-2">Data & Learning</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16" data-aos="fade-up">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">Featured Projects</h2>
+                    <p class="text-slate-500">실무와 개인 학습을 통해 진행한 주요 프로젝트입니다.</p>
+                </div>
+                <a href="#" class="mt-4 md:mt-0 text-indigo-600 font-bold flex items-center gap-1 hover:underline">
+                    View GitHub <i data-lucide="external-link" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-indigo-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?fit=crop&w=800&q=80" alt="Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 bg-white rounded-full text-xs font-medium text-slate-500 border border-slate-200">ASP.NET</span>
+                            <span class="px-3 py-1 bg-white rounded-full text-xs font-medium text-slate-500 border border-slate-200">Oracle</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Enterprise ERP System</h3>
+                        <p class="text-slate-500 text-sm mb-6 leading-relaxed">
+                            사내 자원 관리 효율을 30% 개선한 대규모 ERP 시스템 고도화 프로젝트입니다. 백엔드 로직 최적화를 담당했습니다.
+                        </p>
+                        <a href="#" class="flex items-center gap-2 font-bold text-indigo-600 group/link">
+                            GitHub Repository <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-purple-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?fit=crop&w=800&q=80" alt="Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 bg-white rounded-full text-xs font-medium text-slate-500 border border-slate-200">Python</span>
+                            <span class="px-3 py-1 bg-white rounded-full text-xs font-medium text-slate-500 border border-slate-200">PyTorch</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">AI Image Classifier</h3>
+                        <p class="text-slate-500 text-sm mb-6 leading-relaxed">
+                            딥러닝을 활용한 이미지 분류 모델입니다. 약 95%의 정확도를 기록했으며 Azure ML을 통해 서빙되었습니다.
+                        </p>
+                        <a href="#" class="flex items-center gap-2 font-bold text-indigo-600 group/link">
+                            GitHub Repository <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-blue-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?fit=crop&w=800&q=80" alt="Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 bg-white rounded-full text-xs font-medium text-slate-500 border border-slate-200">Azure</span>
+                            <span class="px-3 py-1 bg-white rounded-full text-xs font-medium text-slate-500 border border-slate-200">Docker</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Cloud Native CI/CD</h3>
+                        <p class="text-slate-500 text-sm mb-6 leading-relaxed">
+                            GitHub Actions와 Azure Container Registry를 연동하여 배포 프로세스를 자동화한 인프라 프로젝트입니다.
+                        </p>
+                        <a href="#" class="flex items-center gap-2 font-bold text-indigo-600 group/link">
+                            GitHub Repository <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 bg-slate-900 text-white rounded-t-[3rem] md:rounded-t-[5rem]">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-4xl font-bold mb-8" data-aos="fade-up">Let's Work Together</h2>
+            <p class="text-slate-400 mb-12 text-lg" data-aos="fade-up" data-aos-delay="100">
+                새로운 프로젝트나 협업 제안은 언제든 환영합니다.<br>
+                아래 채널을 통해 연락주세요!
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-16" data-aos="fade-up" data-aos-delay="200">
+                <a href="mailto:your-email@gmail.com" class="flex items-center gap-3 px-8 py-4 bg-white/10 rounded-2xl hover:bg-white/20 transition-all border border-white/10 group">
+                    <i data-lucide="mail" class="text-indigo-400"></i>
+                    <span class="font-medium">sungkwang0908@naver.com</span>
+                </a>
+                <a href="https://github.com/yourusername" target="_blank" class="flex items-center gap-3 px-8 py-4 bg-white/10 rounded-2xl hover:bg-white/20 transition-all border border-white/10 group">
+                    <i data-lucide="github" class="text-white"></i>
+                    <span class="font-medium">GitHub Profile</span>
+                </a>
+            </div>
+
+            <div class="pt-12 border-t border-white/10 text-slate-500 text-sm">
+                <p>© 2026 Sung-Kwang Choi. Built with Tailwind CSS & ❤️</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+        
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            once: true,
+            offset: 120
+        });
+
+        // Simple Mobile Menu Toggle Logic (if needed)
+        const mobileMenuBtn = document.querySelector('[data-lucide="menu"]');
+        mobileMenuBtn.addEventListener('click', () => {
+            alert('모바일 메뉴가 구현될 자리입니다. 데스크탑 뷰를 참고해 주세요!');
+        });
+    </script>
+</body>
+</html>
